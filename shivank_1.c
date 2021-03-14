@@ -95,5 +95,5 @@ int main()
     printf("Inorder traversal of the modified tree \n"); 
     inorder(root); 
   
-    return 0; 
+    return ; 
 }
