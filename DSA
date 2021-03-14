@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct Node
+{
+	int data;
+	struct Node *pointer;
+};
+void PrintLinkList(struct Node*N)
+{
+	while(N!=NULL)
+	{
+		printf("\n data in link list %d", N-> data);
+		N= N->pointer;
+	}
+}
+int main()
+{
+	
+	struct Node *head=(struct Node*)malloc(sizeof(struct Node));
+	struct Node *first=(struct Node*)malloc(sizeof(struct Node));
+	struct Node *second=(struct Node*)malloc(sizeof(struct Node));
+    struct Node *third=(struct Node*)malloc(sizeof(struct Node));	
+    head->data=10;
+    head->pointer=first;
+    first->data=20;
+    first->pointer=second;
+    second->data=30;
+    second->pointer=third;
+    third->data=40;
+    third->pointer= NULL;
+    
+	printf("\nHello world");
+	PrintLinkList(head);
+	return 0;
+}
